@@ -1,37 +1,41 @@
-import { version } from 'inferno';
 import Component from 'inferno-component';
 import './registerServiceWorker';
 import Logo from './logo';
 import './App.css';
-import { data, schema, uischema} from "./static";
-import { Provider } from 'inferno-redux';
-import { initJsonFormsStore } from 'jsonforms-inferno/dist/ts-build/store'
+import schema from './schema.json';
+import uischema from './uischema.json';
 import JsonFormsRenderer from 'jsonforms-inferno/dist/ts-build/renderers/dispatch-renderer'
 import 'jsonforms-inferno/dist/ts-build/renderers';
-import 'jsonforms-inferno/'
+import { connect } from 'inferno-redux';
+import {getData} from 'jsonforms-inferno/dist/ts-build/reducers';
 
 class App extends Component {
 
   render() {
 
-    const store = initJsonFormsStore(data, schema, uischema);
 
     return (
       <div className="App">
         <header className="App-header">
           <Logo width="80" height="80" />
-          <h1>{`Welcome to Inferno ${version}`}</h1>
+          <h1>{`Welcome to JSONForms based on Inferno`}</h1>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-
-        <Provider store={store}>
-          <JsonFormsRenderer schema={schema} uischema={uischema} />
-        </Provider>
+        Bound data:
+        <p>{this.props.dataAsString}</p>
+        <JsonFormsRenderer schema={schema} uischema={uischema} />
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  dataAsString: JSON.stringify(getData(state))
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(App)

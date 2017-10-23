@@ -1,5 +1,18 @@
 import { render } from 'inferno';
+import { Provider } from 'inferno-redux';
 import App from './App';
 import './index.css';
+import schema from './schema.json';
+import uischema from './uischema.json';
+import { initJsonFormsStore } from 'jsonforms-inferno/dist/ts-build/store'
 
-render(<App />, document.getElementById('app'));
+const store = initJsonFormsStore({
+  firstName: "Max"
+}, schema, uischema);
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('app')
+);
