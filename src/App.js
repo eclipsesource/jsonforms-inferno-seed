@@ -12,19 +12,17 @@ import {getData} from 'jsonforms-inferno/dist/ts-build/reducers';
 class App extends Component {
 
   render() {
-
-
     return (
       <div className="App">
         <header className="App-header">
-          <Logo width="80" height="80" />
-          <h1>{`Welcome to JSONForms based on Inferno`}</h1>
+          <Logo />
+          <h1>{`Welcome to JSON Forms 2`}</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          More Forms. Less Code.
         </p>
         Bound data:
-        <p>{this.props.dataAsString}</p>
+        <pre>{this.props.dataAsString}</pre>
         <JsonFormsRenderer schema={schema} uischema={uischema} />
       </div>
     );
