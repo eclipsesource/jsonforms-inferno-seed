@@ -7,7 +7,7 @@ import uischema from './uischema.json';
 import { initJsonFormsStore } from 'jsonforms-inferno/dist/ts-build/store'
 
 const store = initJsonFormsStore({
-  firstName: "Max"
+  name: "Max"
 }, schema, uischema);
 
 render(

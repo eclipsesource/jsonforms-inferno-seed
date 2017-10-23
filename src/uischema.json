@@ -1,53 +1,17 @@
 {
-  "type": "VerticalLayout",
+  "type": "HorizontalLayout",
   "elements": [
     {
       "type": "Control",
-      "label": "Tasks",
-      "scope": {
-        "$ref": "#/properties/tasks"
-      }
+      "scope": { "$ref": "#/properties/name" }
     },
     {
       "type": "Control",
-      "label": "First Name",
-      "scope": {
-        "$ref": "#/properties/firstName"
-      }
+      "scope": { "$ref": "#/properties/age" }
     },
     {
       "type": "Control",
-      "label": "Last Name",
-      "scope": {
-        "$ref": "#/properties/lastName"
-      }
-    },
-    {
-      "type": "Control",
-      "label": "Email",
-      "scope": {
-        "$ref": "#/properties/email"
-      }
-    },
-    {
-      "type": "HorizontalLayout",
-      "label": "ss1",
-      "elements": [
-        {
-          "type": "Control",
-          "label": "Date Of Birth",
-          "scope": {
-            "$ref": "#/properties/dateOfBirth"
-          }
-        },
-        {
-          "type": "Control",
-          "label": "Gender",
-          "scope": {
-            "$ref": "#/properties/gender"
-          }
-        }
-      ]
+      "scope": { "$ref": "#/properties/gender" }
     }
   ]
 }
