@@ -104,7 +104,7 @@
 				}
 			],
 			"rule": {
-				"effect": "HIDE",
+				"effect": "SHOW",
 				"condition": {
 					"type": "LEAF",
 					"scope": {
