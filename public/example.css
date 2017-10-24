@@ -14,6 +14,12 @@ body {
   margin: 0;
   padding: 1em;
 }
+
+.demoform {
+  max-width: 900px;
+  margin: auto;
+}
+
 /* Common */
 [hidden] {display: none;}
 /* Controls */
@@ -42,7 +48,7 @@ input {
 }
 .control > .validation:empty {margin-left: 0;}
 .control > .validation {color: var(--jsf-validation-color);}
-.control > .input {
+.control > input {
   border-style: solid;
   border-width: thin;
   border-radius: 0.2em;

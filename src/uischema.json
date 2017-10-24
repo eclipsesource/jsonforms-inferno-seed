@@ -32,7 +32,12 @@
 					"scope": {
 						"$ref": "#/properties/dateOfBirth"
 					}
-				},
+				}
+			]
+		},
+		{
+			"type": "HorizontalLayout",
+			"elements": [
 				{
 					"type": "Control",
 					"scope": {
@@ -43,6 +48,12 @@
 					"type": "Control",
 					"scope": {
 						"$ref": "#/properties/gender"
+					}
+				},
+				{
+					"type": "Control",
+					"scope": {
+						"$ref": "#/properties/rating"
 					}
 				},
 				{
@@ -101,12 +112,6 @@
 					},
 					"expectedValue": true
 				}
-			}
-		},
-		{
-			"type": "Control",
-			"scope": {
-				"$ref": "#/properties/rating"
 			}
 		}
 	]

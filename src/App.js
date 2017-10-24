@@ -16,14 +16,19 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <Logo />
-          <h1>{`Welcome to JSON Forms 2`}</h1>
         </header>
+        <h1>{`Welcome to JSON Forms 2`}</h1>
         <p className="App-intro">
           More Forms. Less Code.
         </p>
         Bound data:
         <pre>{this.props.dataAsString}</pre>
-        <JsonFormsRenderer schema={schema} uischema={uischema} />
+        <div className="demoform">
+          <JsonFormsRenderer
+            schema={schema}
+            uischema={uischema}
+          />
+        </div>
       </div>
     );
   }
