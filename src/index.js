@@ -7,13 +7,16 @@ import uischema from './uischema.json';
 import { initJsonFormsStore } from 'jsonforms-inferno/dist/ts-build/store'
 import { registerRenderer } from 'jsonforms-inferno/dist/ts-build/actions'
 import RatingControl, { ratingControlTester } from "./rating.control"
+import { materialize } from './materialize/materialize'
 
 const store = initJsonFormsStore({
   name: "Max"
 }, schema, uischema);
 
+materialize();
+
 // Custom control registration
-// store.dispatch(registerRenderer(ratingControlTester, RatingControl));
+store.dispatch(registerRenderer(ratingControlTester, RatingControl));
 
 render(
   <Provider store={store}>
