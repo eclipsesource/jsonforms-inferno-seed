@@ -7,7 +7,7 @@ import uischema from './uischema.json';
 import { initJsonFormsStore } from 'jsonforms-inferno/dist/ts-build/store'
 import { registerRenderer } from 'jsonforms-inferno/dist/ts-build/actions'
 import RatingControl, { ratingControlTester } from "./rating.control"
-import { materialize } from './materialize/materialize'
+import { materialize } from 'jsonforms-inferno/dist/ts-build/renderers/materialized'
 
 const store = initJsonFormsStore({
   name: "Max"

@@ -8,7 +8,7 @@
     "inferno-create-element": "^3.10.1",
     "inferno-redux": "^3.10.1",
     "inferno-scripts": "^5.0.0",
-    "jsonforms-inferno": "2.1.0-alpha.1"
+    "jsonforms-inferno": "2.1.0-alpha.3"
   },
   "scripts": {
     "start": "inferno-scripts start",

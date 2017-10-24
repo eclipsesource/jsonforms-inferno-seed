@@ -9,13 +9,13 @@ import {
   refEndsWith
 } from 'jsonforms-inferno/dist/ts-build/core/testers';
 import { Rating } from './Rating';
-import { mapStateToControlProps } from 'jsonforms-inferno/dist/ts-build/renderers/controls/base.control'
+import { mapStateToControlProps } from 'jsonforms-inferno/dist/ts-build/renderers/renderer.util'
 
 /**
  * Default tester for integer controls.
  * @type {RankedTester}
  */
-export const ratingControlTester = rankWith(3, refEndsWith('rating'));
+export const ratingControlTester = rankWith(4, refEndsWith('rating'));
 
 export class RatingControl extends Control {
 
